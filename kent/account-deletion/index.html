@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete your Frank by Kent account</title>
+  <meta name="description" content="Request deletion of your Frank by Kent account and associated data. Frank by Kent is published on Google Play by Kent Engineers &amp; Constructors Inc.">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <style>
+    :root {
+      --brand: #53BDBF;
+      --brand-dark: #2f8f91;
+      --text: #1f2328;
+      --muted: #59636e;
+      --border: #d8dee4;
+      --surface: #f6f8fa;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    header { background: var(--brand); color: #fff; padding: 16px; }
+    header .inner, main, footer { max-width: 760px; margin: 0 auto; }
+    header .inner { display: flex; align-items: center; gap: 16px; }
+    header img { width: 48px; height: 48px; border-radius: 11px; }
+    header .app-name { font-size: 1.25rem; font-weight: 600; }
+    main { padding: 24px 16px 48px; }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 8px; }
+    h2 { font-size: 1.25rem; margin: 40px 0 8px; }
+    h3 { font-size: 1rem; margin: 20px 0 4px; }
+    p, li { color: var(--text); }
+    .lead { color: var(--muted); margin-top: 0; }
+    ol, ul { padding-left: 1.25rem; }
+    li { margin-bottom: 6px; }
+    .card {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+    label { display: block; font-weight: 600; margin-bottom: 6px; }
+    input[type="email"] {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #fff;
+    }
+    button {
+      margin-top: 14px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--brand-dark);
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:disabled { opacity: 0.6; cursor: default; }
+    #status { margin: 12px 0 0; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--border); }
+    th { font-size: 0.875rem; color: var(--muted); font-weight: 600; }
+    footer { padding: 24px 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <img src="icon.png" alt="Frank by Kent app icon">
+      <span class="app-name">Frank by Kent</span>
+    </div>
+  </header>
+
+  <main>
+    <h1>Delete your Frank by Kent account</h1>
+    <p class="lead">
+      This page lets users of the <strong>Frank by Kent</strong> app (Google Play package
+      <code>com.kentplc.intranet</code>), published by <strong>Kent Engineers &amp; Constructors Inc</strong>,
+      request that their account and associated data be deleted.
+    </p>
+
+    <h2>How to request deletion</h2>
+    <ol>
+      <li>Enter the email address you registered with in the form below and select <strong>Request deletion</strong>.
+        You can also reach this page from the app: open your profile in Frank by Kent and choose <strong>Delete profile</strong>.</li>
+      <li>We send a verification email to that address. Open it and select the link to confirm that you want your account deleted.</li>
+      <li>Your account is deleted, usually straight away and always within 2 hours of confirmation. You lose access to Frank by Kent at that point.</li>
+    </ol>
+
+    <div class="card">
+      <form id="deletionForm" novalidate>
+        <label for="emailAddress">Registered email address</label>
+        <input type="email" id="emailAddress" name="email" autocomplete="email" placeholder="you@example.com" required>
+        <button type="submit" id="submitButton">Request deletion</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <h2>What is deleted</h2>
+    <table>
+      <thead>
+        <tr><th>Data</th><th>What happens</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Account and sign-in details (email address, password)</td>
+          <td>Deleted permanently.</td>
+        </tr>
+        <tr>
+          <td>Profile information (name, photo, job title, contact details)</td>
+          <td>Deleted permanently.</td>
+        </tr>
+        <tr>
+          <td>Push notification registration for your devices</td>
+          <td>Deleted permanently.</td>
+        </tr>
+        <!-- CONFIRM WITH KENT: what happens to posts, comments and files the user published. -->
+        <tr>
+          <td>Content you posted (posts, comments, files)</td>
+          <td>[CONFIRM: deleted / anonymised / kept]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>What is kept, and for how long</h2>
+    <ul>
+      <!-- CONFIRM WITH KENT: legal or business retention, e.g. audit logs or backups, and the period. -->
+      <li>[CONFIRM: records Kent must keep for legal, security or audit reasons, and for how long, e.g. "Backups are overwritten within 30 days."]</li>
+      <li>Crash reports and anonymous usage statistics, which do not contain your name or email address, are kept by our analytics provider for up to 90 days for crash reports and [CONFIRM: Analytics retention setting, 2 or 14 months] for usage statistics, then deleted automatically.</li>
+    </ul>
+
+    <h2>Questions</h2>
+    <h3>Can I cancel a deletion request?</h3>
+    <p>Until you select the link in the verification email, nothing is deleted, so you can ignore that email to cancel. Once you confirm, deletion cannot be undone. You can create a new account at any time.</p>
+    <h3>I did not receive the verification email</h3>
+    <!-- CONFIRM WITH KENT: support contact address. -->
+    <p>Check your spam folder. If it still has not arrived, contact [CONFIRM: support email] and include the email address you registered with.</p>
+  </main>
+
+  <footer>
+    Frank by Kent &middot; Kent Engineers &amp; Constructors Inc &middot; All rights reserved
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $("#deletionForm").submit(function (e) {
+      e.preventDefault();
+      var input = $("#emailAddress")[0];
+      var status = $("#status");
+      if (!input.checkValidity()) {
+        status.text("Enter a valid email address.");
+        return;
+      }
+      $("#submitButton").prop("disabled", true);
+      status.text("");
+      // Same request the previous page sent, so the existing deletion service keeps working unchanged.
+      $.ajax({
+        type: "POST",
+        url: "https://8x6p0bosw3.execute-api.us-east-1.amazonaws.com/register",
+        data: JSON.stringify({ email: input.value }),
+        crossDomain: true,
+        success: function () {
+          status.text("We have received your request. Check your email to confirm the deletion.");
+        },
+        error: function () {
+          status.text("Something went wrong. Please try again later.");
+          $("#submitButton").prop("disabled", false);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
